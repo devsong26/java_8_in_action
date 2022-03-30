@@ -1,3 +1,5 @@
+package chapter1;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -21,8 +23,14 @@ public class Example1 {
         inventory.sort(Comparator.comparing(Apple::getWeight));
     }
 
-    private static class Apple {
+    public static class Apple {
         private Integer weight;
+        private String color;
+
+        public Apple(Integer weight, String color) {
+            this.weight = weight;
+            this.color = color;
+        }
 
         public Apple(Integer weight) {
             this.weight = weight;
@@ -30,6 +38,18 @@ public class Example1 {
 
         public Integer getWeight() {
             return this.weight;
+        }
+
+        public String getColor() {
+            return this.color;
+        }
+
+        public static boolean isGreenApple(Apple apple){
+            return "green".equals(apple.getColor());
+        }
+
+        public static boolean isHeavyApple(Apple apple){
+            return apple.getWeight() > 150;
         }
     }
 }
