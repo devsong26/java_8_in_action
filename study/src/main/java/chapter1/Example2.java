@@ -56,20 +56,20 @@ public class Example2 {
 //                        .collect(groupingBy(Transaction::getCurrency));
     }
 
-    public static List<Apple> filterGreenApples(List<Apple> inventory){
+    public static List<Apple> filterGreenApples(List<Apple> inventory, String color){
         List<Apple> result = new ArrayList<>();
         for(Apple apple : inventory){
-            if("green".equals(apple.getColor())){
+            if(color.equals(apple.getColor())){
                 result.add(apple);
             }
         }
         return result;
     }
 
-    public static List<Apple> filterHeavyApples(List<Apple> inventory){
+    public static List<Apple> filterHeavyApples(List<Apple> inventory, int weight){
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory){
-            if(apple.getWeight() > 150){
+            if(apple.getWeight() > weight){
                 result.add(apple);
             }
         }
