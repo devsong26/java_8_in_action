@@ -15,6 +15,17 @@ public class Apple {
         this.weight = weight;
     }
 
+    public Apple() {
+
+    }
+
+    public Apple(String color, Integer weight) {
+    }
+
+    public Apple(Integer i, Integer j, Integer k){
+
+    }
+
     public Integer getWeight() {
         return this.weight;
     }
