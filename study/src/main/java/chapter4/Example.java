@@ -126,6 +126,9 @@ public class Example {
                 .limit(20)
                 .forEach(e ->
                     System.out.println("(" + e[0] + ", " + e[1] + ")"));
+
+//        Map<Currency, List<Transaction>> transactionByCurrencies =
+//                transasctions.stream().collect(groupingBy(Transaction::getCurrency));
     }
 
 }
